@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:weatherapp/authprovider.dart';
 import 'package:weatherapp/reusablewidget.dart';
 import 'package:weatherapp/service.dart';
-import 'package:weather_icons/weather_icons.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen({super.key});
@@ -26,6 +27,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
         title: Text('Weather'),
         centerTitle: true,
         actions: [
+          IconButton(
+            onPressed: () {
+              Provider.of<AuthProvider>(context, listen: false).logout();
+            },
+            icon: Icon(Icons.logout_outlined),
+          ),
+          SizedBox(width: 10),
           IconButton(
             onPressed: () {
               setState(() {});

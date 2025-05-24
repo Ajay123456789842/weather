@@ -41,6 +41,11 @@ dependencies:
   weather_icons: ^3.0.0
   intl: 
   lottie: 
+  shared_preferences: 
+  firebase_core:
+  firebase_messaging: 
+  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
